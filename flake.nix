@@ -16,15 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
-
-    tmux-config = {
-      url = "github:irohn/config.tmux";
-      flake = false;
-    };
-    # greeneye = {
-    #   url = "git+ssh://git@github.com/greeneyetechnology/dev-utils";
-    #   flake = false;
-    # };
   };
 
   outputs = inputs: let

@@ -3,7 +3,6 @@
   home-manager,
   agenix,
   flake-utils,
-  tmux-config,
   ...
 }: let
   settings = import ../settings.nix;
@@ -19,7 +18,6 @@ in {
         ];
         extraSpecialArgs = {
           inherit settings;
-          inherit tmux-config;
         };
       };
     })

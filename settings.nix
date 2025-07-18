@@ -5,6 +5,7 @@
   home = {
     imports = [
       ./home/age.nix
+      ./home/bitwarden.nix
       ./home/direnv.nix
       ./home/eza.nix
       ./home/fd.nix

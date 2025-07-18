@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     alt-tab-macos
-    mos
-    karabiner-elements
-    raycast
-    xquartz
     iina
+    karabiner-elements
+    mos
+    raycast
     rectangle
+    xquartz
   ];
 
   homebrew = {

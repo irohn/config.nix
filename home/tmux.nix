@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.tmux = {
     enable = true;
     extraConfig = ''
@@ -192,13 +192,6 @@
 
       set-option -g status-justify left
     '';
-
-    # Plugins (if you want to use TPM plugins)
-    plugins = with pkgs.tmuxPlugins; [
-      # Add any plugins you might be using
-      # sensible
-      # yank
-    ];
   };
 
   # Create the necessary script files

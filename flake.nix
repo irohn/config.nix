@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    darwin = {
+    nix-darwin = {
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -20,11 +20,11 @@
 
   outputs = inputs: let
     homeModule = import ./modules/home.nix inputs;
-    # darwinModule = import ./modules/darwin.nix inputs;
+    darwinModule = import ./modules/darwin.nix inputs;
     # nixosModule = import ./modules/nixos.nix inputs;
   in
     homeModule
-    # // darwinModule
+    // darwinModule
     # // nixosModule
     // inputs.flake-utils.lib.eachDefaultSystem (system: {
       devShells.default = import ./shell.nix;

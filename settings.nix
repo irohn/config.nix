@@ -20,10 +20,25 @@
       ./home/zsh.nix
     ];
   };
-  darwin = {
-    imports = [];
-  };
-  nixos = {
-    imports = [];
+  hosts = {
+    macbook = {
+      hostname = "macbook";
+      system = "aarch64-darwin";
+      stateVersion = 5;
+      imports = [
+        ./darwin/apps.nix
+        ./darwin/fonts.nix
+        ./darwin/networking.nix
+        ./darwin/security.nix
+        ./darwin/system.nix
+        ./darwin/users.nix
+      ];
+    };
+    desktop = {
+      hostname = "desktop";
+      system = "x86_64-linux";
+      stateVersion = "24.11";
+    };
+    shared_imports = [];
   };
 }

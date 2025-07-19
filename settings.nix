@@ -13,6 +13,7 @@
       ./home/ghostty.nix
       ./home/git.nix
       ./home/k8s.nix
+      ./home/librewolf.nix
       ./home/neovim.nix
       ./home/ripgrep.nix
       ./home/starship.nix

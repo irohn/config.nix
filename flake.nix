@@ -26,7 +26,11 @@
     homeModule
     // darwinModule
     # // nixosModule
-    // inputs.flake-utils.lib.eachDefaultSystem (system: {
-      devShells.default = import ./shell.nix;
-    });
+    // inputs.flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = inputs.nixpkgs.legacyPackages.${system};
+      in {
+        devShells.default = import ./shell.nix {inherit pkgs;};
+      }
+    );
 }

@@ -1,14 +1,4 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    alt-tab-macos
-    iina
-    karabiner-elements
-    mos
-    raycast
-    rectangle
-    xquartz
-  ];
-
+{
   homebrew = {
     enable = true;
     # 'zap': uninstalls all formulae(and related files) not listed here.
@@ -16,9 +6,15 @@
     taps = [];
     brews = [];
     casks = [
-      "keepingyouawake" # Prevent screen from turning off
-      "stremio"
+      "alt-tab"
       "docker-desktop"
+      "karabiner-elements"
+      "keepingyouawake" # Prevent screen from turning off
+      "mos"
+      "raycast"
+      "rectangle"
+      "stremio"
+      "xquartz"
     ];
   };
 }

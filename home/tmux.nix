@@ -264,7 +264,7 @@
         #!/usr/bin/env bash
         set -euo pipefail
 
-        FIND_DEPTH=10
+        FIND_DEPTH=5
         FIND_DIR="$HOME"
 
         excludes=(
@@ -293,7 +293,7 @@
         )
 
         if command -v "fd" >/dev/null 2>&1; then
-            find_command="fd -H -t d '^.git$' $FIND_DIR $(printf -- "--exclude %s " "''${excludes[@]}") --max-depth ''${FIND_DEPTH} -x echo {//}"
+            find_command="fd '^.git$' $FIND_DIR $(printf -- "--exclude %s " "''${excludes[@]}") --hidden --type=directory --no-ignore --max-depth ''${FIND_DEPTH} -x echo {//}"
         else
             find_command="find $FIND_DIR -maxdepth ''${FIND_DEPTH} -name .git -type d $(printf -- "-not -path '*/%s/*' " "''${excludes[@]}" | sed 's/ $//') -exec dirname {} \;"
         fi

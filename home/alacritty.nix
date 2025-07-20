@@ -4,9 +4,8 @@
     settings = {
       window = {
         decorations = "None";
-        opacity = 1.0;
+        opacity = 0.99;
         blur = true;
-        startup_mode = "Maximized";
         title = "Terminal";
       };
       font = {

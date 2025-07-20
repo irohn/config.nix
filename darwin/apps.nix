@@ -13,7 +13,9 @@
       "mos"
       "raycast"
       "rectangle"
+      "slack"
       "stremio"
+      "tailscale-app"
       "xquartz"
     ];
   };

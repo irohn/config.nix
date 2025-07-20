@@ -9,4 +9,5 @@
   nix.settings.trusted-users = [
     settings.username
   ];
+  system.primaryUser = "${settings.username}";
 }

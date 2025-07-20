@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   settings,
   ...
 }: {
@@ -22,6 +23,10 @@
 
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
+
+  home.sessionVariables = {
+    XDG_RUNTIME_DIR = lib.mkIf pkgs.stdenv.isDarwin "$(getconf DARWIN_USER_TEMP_DIR)";
+  };
 
   imports = settings.home.imports or [];
 

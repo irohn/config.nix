@@ -5,13 +5,15 @@
   home = {
     imports = [
       ./home/age.nix
+      ./home/alacritty.nix
       ./home/bitwarden.nix
       ./home/direnv.nix
       ./home/eza.nix
       ./home/fd.nix
       ./home/fzf.nix
-      ./home/ghostty.nix
+      # ./home/ghostty.nix # marked broken on MacOS
       ./home/git.nix
+      ./home/greeneye.nix
       ./home/k8s.nix
       ./home/librewolf.nix
       ./home/neovim.nix
@@ -41,6 +43,6 @@
       system = "x86_64-linux";
       stateVersion = "24.11";
     };
-    shared_imports = [];
   };
+  shared_imports = [];
 }

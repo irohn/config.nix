@@ -58,7 +58,10 @@
         alt-tab = "workspace-back-and-forth";
         # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
         alt-shift-tab = "move-workspace-to-monitor --wrap-around next";
-
+        alt-shift-s = "exec-and-forget screencapture -i -c";
+        alt-enter = "exec-and-forget open -n ~/Applications/Home\\ Manager\\ Apps/Alacritty.app";
+        alt-b = "exec-and-forget open -n ~/Applications/Home\\ Manager\\ Apps/LibreWolf.app";
+        alt-v = "exec-and-forget open -n ~/Applications/Home\\ Manager\\ Apps/Bitwatden.app";
         # See: https://nikitabobko.github.io/AeroSpace/commands#mode
         alt-shift-semicolon = "mode service";
       };

@@ -1,8 +1,8 @@
 {
-  #  macOS's System configuration
-
   #  All the configuration options are documented here:
   #    https://daiderd.com/nix-darwin/manual/index.html#sec-options
+  #  System options are documented here:
+  #    https://mynixos.com/nix-darwin/options/system
   system = {
     keyboard = {
       enableKeyMapping = true; # enable key remapping
@@ -15,6 +15,7 @@
         NSAutomaticPeriodSubstitutionEnabled = false; # disable auto period substitution
         NSAutomaticQuoteSubstitutionEnabled = false; # disable auto quote substitution
         NSAutomaticSpellingCorrectionEnabled = false; # disable auto spelling correction
+        NSWindowShouldDragOnGesture = true; # allow dragging windows with ctrl + cmd + drag
         _HIHideMenuBar = false; # hide menu bar
       };
       dock = {

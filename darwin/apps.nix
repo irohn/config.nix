@@ -12,7 +12,6 @@
       "keepingyouawake" # Prevent screen from turning off
       "mos"
       "raycast"
-      "rectangle"
       "slack"
       "stremio"
       "tailscale-app"

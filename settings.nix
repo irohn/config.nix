@@ -30,6 +30,7 @@
       system = "aarch64-darwin";
       stateVersion = 5;
       imports = [
+        ./darwin/aerospace.nix
         ./darwin/apps.nix
         ./darwin/fonts.nix
         ./darwin/networking.nix

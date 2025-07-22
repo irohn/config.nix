@@ -4,6 +4,10 @@
   #  All the configuration options are documented here:
   #    https://daiderd.com/nix-darwin/manual/index.html#sec-options
   system = {
+    keyboard = {
+      enableKeyMapping = true; # enable key remapping
+      remapCapsLockToEscape = true; # remap Caps Lock to Escape
+    };
     defaults = {
       NSGlobalDomain = {
         NSAutomaticCapitalizationEnabled = false; # disable auto capitalization
@@ -11,13 +15,12 @@
         NSAutomaticPeriodSubstitutionEnabled = false; # disable auto period substitution
         NSAutomaticQuoteSubstitutionEnabled = false; # disable auto quote substitution
         NSAutomaticSpellingCorrectionEnabled = false; # disable auto spelling correction
-        # _HIHideMenuBar = true; # hide menu bar
+        _HIHideMenuBar = false; # hide menu bar
       };
-      menuExtraClock.Show24Hour = true; # show 24 hour clock
       dock = {
-        autohide = true;
+        autohide = true; # auto-hide dock
         orientation = "bottom";
-        show-process-indicators = false;
+        show-process-indicators = false; # hide process indicators
         show-recents = false;
         static-only = true;
       };
@@ -32,14 +35,15 @@
         Clicking = true; # enable tap to click
         TrackpadRightClick = true; # enable two finger right click
       };
+      spaces = {
+        spans-displays = true;
+      };
+      menuExtraClock.Show24Hour = true; # show 24 hour clock
       CustomUserPreferences = {
         "com.apple.desktopservices" = {
           # Avoid creating .DS_Store files on network or USB volumes
           DSDontWriteNetworkStores = true;
           DSDontWriteUSBStores = true;
-        };
-        "com.apple.spaces" = {
-          "spans-displays" = 0; # Display have seperate spaces
         };
         "com.apple.WindowManager" = {
           EnableStandardClickToShowDesktop = 0; # Click wallpaper to reveal desktop

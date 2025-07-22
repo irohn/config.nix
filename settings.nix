@@ -31,8 +31,8 @@
       stateVersion = 5;
       imports = [
         ./darwin/aerospace.nix
-        ./darwin/apps.nix
         ./darwin/fonts.nix
+        ./darwin/homebrew.nix
         ./darwin/networking.nix
         ./darwin/security.nix
         ./darwin/system.nix

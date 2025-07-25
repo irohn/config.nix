@@ -6,6 +6,8 @@
     neovim
     nodejs # for copilot
     ripgrep
+    tree-sitter
+    lazygit
   ];
 
   home.sessionVariables = {

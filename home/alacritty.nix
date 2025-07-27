@@ -21,6 +21,11 @@
       selection.save_to_clipboard = true;
       keyboard.bindings = [
         {
+          key = "Back";
+          mods = "Command";
+          chars = "\\u0015";
+        }
+        {
           key = "Key1";
           mods = "Command";
           chars = "\\u001b1";

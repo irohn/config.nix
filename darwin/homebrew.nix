@@ -11,6 +11,7 @@
       "karabiner-elements"
       "keepingyouawake" # Prevent screen from turning off
       "mos"
+      "logi-options+"
       "raycast"
       "slack"
       "stremio"

@@ -3,6 +3,7 @@
   home-manager,
   agenix,
   flake-utils,
+  neovim-nightly-overlay,
   ...
 }: let
   settings = import ../settings.nix;
@@ -11,13 +12,20 @@ in {
     map (system: {
       name = system;
       value = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [
+            neovim-nightly-overlay.overlays.default
+          ];
+        };
         modules = [
           agenix.homeManagerModules.default
           ../home/000-default.nix
         ];
         extraSpecialArgs = {
-          inherit settings;
+          inherit
+            settings
+            ;
         };
       };
     })

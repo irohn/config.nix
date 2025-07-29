@@ -10,7 +10,7 @@
       "docker-desktop"
       "karabiner-elements"
       "keepingyouawake" # Prevent screen from turning off
-      "mos"
+      "scroll-reverser"
       "logi-options+"
       "raycast"
       "slack"
